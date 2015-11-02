@@ -3,28 +3,6 @@ var router = express.Router();
 
 var userController = require('../controllers/userController.js');
 
-/*
- * Check User is authorized
- */
-var injectUser = function (req, res, next) {
-    var TOKEN_HEADER = "X-Studentsdb-Token";
-    var userToken = req.get(TOKEN_HEADER);
-
-    if (userToken) {
-        userController.getUserByToken(userToken, function(err, doc) {
-            if (err) {
-                res.status(500).send(err);
-                return;
-            }
-
-            req.user = doc;
-            next();
-        })
-    } else {
-        req.user = null;
-    }
-};
-
 /**
  * GET all Users
  */

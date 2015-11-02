@@ -1,5 +1,13 @@
 # Students REST Backend example
 
+Install Deps
+
+   npm install
+
+Run
+   
+   node server.js
+
 To Run MongoDB:
 
     mongod --dbpath ~/Development/node/dhbw-mobilewebdev/day6/1_studentsdb/db
