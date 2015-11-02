@@ -1,0 +1,5 @@
+# Students REST Backend example
+
+To Run MongoDB:
+
+    mongod --dbpath ~/Development/node/dhbw-mobilewebdev/day6/1_studentsdb/db
