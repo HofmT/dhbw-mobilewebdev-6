@@ -31,7 +31,7 @@ router.get('/:id', function (req, res) {
     // own access of user details (complete)
     // foreign access of user details  (filtered)
 
-    var user = userController.getUser(id, [], function (err, user) {
+    var user = userController.getUser(id, function (err, user) {
         if (err) {
             res.status(500).send({"err": err});
         }
